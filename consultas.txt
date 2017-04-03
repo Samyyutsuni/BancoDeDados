@@ -1,0 +1,16 @@
+SELECT * from user as u INNER JOIN aluno as a on a.user_user_id=u.user_id WHERE u.user_idade < 18;
+
+SELECT * from user as u INNER JOIN aluno as a on a.user_user_id=u.user_id INNER JOIN endereco as e ON e.idendereco_id= u.endereco_idendereco_id WHERE e.endereco_cidade NOT LIKE "coxim"
+
+SELECT * from user as u INNER JOIN aluno as a ON u.user_id =a.user_user_id INNER JOIN aluno_has_curso ac on a.idaluno=ac.aluno_idaluno INNER JOIN curso AS c on c.curso_id= ac.curso_curso_id WHERE c.curso_nome LIKE "sistemas de informação"
+
+SELECT *FROM user as u INNER JOIN user_has_livro as l ON u.user_id = l.user_user_id INNER JOIN aluno as a WHERE l.estado LIKE "ativo"
+
+SELECT *FROM user as u INNER JOIN user_has_livro as l ON u.user_id = l.user_user_id INNER JOIN professor as a WHERE l.estado LIKE "ativo"
+
+SELECT *FROM user as u INNER JOIN user_has_livro as l ON u.user_id = l.user_user_id INNER JOIN professor as p INNER JOIN aluno AS a WHERE l.estado LIKE "ativo" 
+
+SELECT *FROM user as u INNER JOIN user_has_livro as l ON u.user_id = l.user_user_id INNER JOIN aluno as a WHERE l.estado LIKE "inativo"
+
+
+
